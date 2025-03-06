@@ -2,6 +2,9 @@ package com.furniro.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
@@ -34,6 +37,14 @@ public class Product {
     private String imageUrl;
     
     private LocalDateTime createdAt;
-    
+
     private LocalDateTime updatedAt;
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updateAt) {
+        this.updatedAt = updateAt;
+    }
 }
